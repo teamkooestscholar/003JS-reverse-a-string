@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(52, 52, 52);
+}
+.name{
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    justify-content: center;
+    padding: 50px 50px  50px 50px;
+}
+.Reverse-String{
+    padding-top: 60px;
+    background-color: rgb(201, 198, 198);
+    text-align: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.Reverse-String h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Reverse-String input{
+    border-radius: 3px;
+    border: none;
+    padding: 10px 10px 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Reverse-String button{
+    border: none;
+    padding: 10px 10px 10px 10px;
+    border-radius: 3px;
+    background-color: rgb(23, 23, 23);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: 0.5s;
+}
+.Reverse-String button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+
+}
+
+
+.Reverse-String p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
