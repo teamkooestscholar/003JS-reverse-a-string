@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>003 JS - Reverse A String</title>
-  <script src="solution.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>003 JS - Reverse A String</title>
 </head>
 <body>
-  
+    <h1>REVERSE STRING</h1>
+    <label for="inputString">Enter a String:</label>
+    <input type="text" id="inputString" placeholder="Enter string">
+    <button onclick="reverseString()">Reverse</button>
+    
+    <p id="reverse"></p>
 </body>
+<script>
+    function reverseString(){
+        const input = document.getElementById("inputString");
+        const show_result = document.getElementById("reverse");
+        const inputString = input.value;
+        let n_str = "";
+    for(let i = inputString.length -1; i>=0; --i){
+        n_str += inputString[i];        
+    }
+    show_result.textContent = "Reverse word = " + n_str;
+
+}
+</script>
 </html>
