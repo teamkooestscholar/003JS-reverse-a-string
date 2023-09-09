@@ -1,17 +1,28 @@
-// program to reverse a string
+function reverseString(inputString) {
+  // Implementation of the reverseString function (as shown above)
 
-function reverseString(str) {
-
-  // empty string
-  let newString = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-      newString += str[i];
+  // Check if the input is a valid string
+  if (typeof inputString !== 'string') {
+    return "Invalid input. Please enter a string.";
   }
-  return newString;
+
+  let reversedString = '';
+  let i = inputString.length - 1;
+
+  while (i >= 0) {
+    reversedString += inputString[i];
+    i--;
+  }
+
+  return reversedString;
 }
 
-// take input from the user
-const string = prompt('Enter a string: ');
+function reverseAndDisplay() {
+  const inputElement = document.getElementById('inputString');
+  const outputElement = document.getElementById('output');
+  const inputValue = inputElement.value;
 
-const result = reverseString(string);
-console.log(result);
+  const reversedValue = reverseString(inputValue);
+
+  outputElement.textContent = `Reversed string: ${reversedValue}`;
+}
