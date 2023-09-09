@@ -15,11 +15,11 @@ function reverseString(inputString) {
 
 ## Bonus Challenges
 
-* Modify the function to handle special characters or whitespace gracefully. **[+5 extra credit points]**
+* Modify the function to handle special characters or whitespace gracefully. (Hint: You may need to look into regular expressions.) **[+5 extra credit points]**
 
-* Write a version of the function that doesn't use the split, reverse, or join methods. **[+5 extra credit points]**
+* Write a version of the function that doesn't use the split, reverse, or join methods. (Hint: You'll need to use a loop.) **[+5 extra credit points]**
 
-* Create a web page that allows users to input a string and see the reversed result interactively. **[+5 extra credit points]**
+* Create a web page that allows users to input a string and see the reversed result interactively. (Hint: You'll need to use HTML and JavaScript.) **[+5 extra credit points]**
 
 ## How to answer?
 
