@@ -1,3 +1,4 @@
+// Use HTML Live Server for User Input
 function reverseAndDisplay(method) {
   const inputString = document.getElementById('inputString').value;
   let reversed1, reversed2;
