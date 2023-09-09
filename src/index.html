@@ -6,7 +6,47 @@
   <title>003 JS - Reverse A String</title>
   <script src="solution.js" defer></script>
 </head>
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+  }
+
+  .centerDiv {
+    margin: auto;
+    width: max-content;
+    border: 3px solid rgb(73, 153, 223);
+    background-color: aliceblue;
+    padding: 10px;
+    margin-top: 15%;
+    border-radius: 3%;
+  }
+
+  label {
+      font-weight: bold;
+  }
+</style>
 <body>
+  <div class="centerDiv" style="padding: 1%;">
+    <section style="text-align: center; margin-top: 5%;">
+      <h1 style="padding: 0; margin: 0; font-size: xx-large;">STRING REVERSER</h1>
+      <h3 style="padding: 0; margin: 2%;">by Aires Javan Macalino</h3>
+    </section>
   
+    <section style="text-align: center; margin-top: 10%;">
+      <label for="inputString">Enter a string:</label>
+      <input type="text" id="inputString">
+      <br><br>
+      <button onclick="reverseAndDisplay('reverseString1')">Reverse Method 1</button>
+      <button onclick="reverseAndDisplay('reverseString2')">Reverse Method 2</button>
+    </section>
+  
+    <section style="margin-top: 10%;">
+      <p>Method 1 Reversed string: <span id="reversedString1" ></span></p>
+      <p>Method 2 Reversed string: <span id="reversedString2"></span></p>
+    </section>
+  </div>
+
 </body>
 </html>
