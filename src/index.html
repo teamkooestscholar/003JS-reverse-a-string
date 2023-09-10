@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>003 JS - Reverse A String</title>
-  <script src="solution.js" defer></script>
+  <title>String Reversal</title>
 </head>
 <body>
-  
+  <h1>String Reversal</h1>
+  <label for="inputString">Enter a string:</label>
+  <input type="text" id="inputString">
+  <button onclick="reverseString()">Reverse</button>
+  <p>Reversed String:</p>
+  <p id="reversedOutput"></p>
+
+  <script>
+    function reverseString() {
+      // Get user input from the input field
+      const userInput = document.getElementById("inputString").value;
+
+      // Check if the user entered an empty string
+      if (userInput.trim() === "") {
+        document.getElementById("reversedOutput").textContent = "No input provided";
+      } else {
+        // Reverse the user input
+        const reversed = reverseInputString(userInput);
+
+        // Display the reversed string
+        document.getElementById("reversedOutput").textContent = reversed;
+      }
+    }
+
+    function reverseInputString(inputString) {
+      let reversed = '';
+
+      // Iterate through the inputString from end to start
+      for (let i = inputString.length - 1; i >= 0; i--) {
+        reversed += inputString[i];
+      }
+
+      return reversed;
+    }
+  </script>
 </body>
 </html>
