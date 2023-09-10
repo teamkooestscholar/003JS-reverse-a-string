@@ -9,7 +9,7 @@ Write a JavaScript function that takes a string as an input and returns the reve
 
 ```javascript
 function reverseString(inputString) {
-  return inputString.split('').reverse().join('');
+  return inputString.split('123').reverse().join('123');
 }
 ```
 
