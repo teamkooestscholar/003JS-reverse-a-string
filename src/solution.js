@@ -6,4 +6,4 @@ function reverseString(str) {
   return str;
 }
 
-reverseString("reversed");
+reverseString("reverse");
