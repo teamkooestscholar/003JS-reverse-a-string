@@ -1,12 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>003 JS - Reverse A String</title>
-  <script src="solution.js" defer></script>
+  <title>String Reversal</title>
 </head>
 <body>
-  
+  <h1>String Reversal</h1>
+  <input type="text" id="inputString" placeholder="Enter a string">
+  <button onclick="reverseAndDisplay()">Reverse</button>
+  <p>Reversed String: <span id="reversedString"></span></p>
+
+  <script>
+    function reverseAndDisplay() {
+      const inputString = document.getElementById('inputString').value;
+      const reversed = reverseString(inputString);
+      document.getElementById('reversedString').textContent = reversed;
+    }
+
+    function reverseString(inputString) {
+      // Use a regular expression to match any non-word characters or whitespace
+      const regex = /[\W_]/g;
+      // Replace special characters and whitespace with an empty string
+      const cleanedString = inputString.replace(regex, '');
+
+      let reversedString = '';
+      for (let i = cleanedString.length - 1; i >= 0; i--) {
+        reversedString += cleanedString[i];
+      }
+
+      return reversedString;
+    }
+  </script>
 </body>
 </html>
