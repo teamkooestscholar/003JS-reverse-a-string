@@ -1,12 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>003 JS - Reverse A String</title>
-  <script src="solution.js" defer></script>
+  <title>String Reverser</title>
 </head>
 <body>
-  
+  <h1>String Reverser</h1>
+  <label for="inputString">Enter a string:</label>
+  <input type="text" id="inputString">
+  <button onclick="reverseAndDisplay()">Reverse</button>
+  <p>Reversed string: <span id="reversedString"></span></p>
+
+  <script>
+    function reverseString(str) {
+      // Use regular expression to split the string into an array of words
+      const words = str.match(/[\w]+/g);
+
+      if (!words) {
+        // If no words found, return the original string
+        return str;
+      }
+
+      // Reverse each word and join them with non-word characters
+      return str.replace(/[\w]+/g, (match) => {
+        return match.split('').reverse().join('');
+      });
+    }
+
+    function reverseAndDisplay() {
+      const inputElement = document.getElementById('inputString');
+      const reversedElement = document.getElementById('reversedString');
+      const inputString = inputElement.value;
+      const reversedString = reverseString(inputString);
+      reversedElement.textContent = reversedString;
+    }
+  </script>
 </body>
 </html>
