@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>003 JS - Reverse A String</title>
-  <script src="solution.js" defer></script>
+<script>
+function reversestring() {
+var input = document.getElementById("inputstring").value;
+var output = input.split('').reverse().join('');
+document.getElementById("outputstring").textContent = output;
+}
+</script>
 </head>
 <body>
-  
+<input type="text" id="inputstring" placeholder="Please Enter A String">
+<button onclick="reversestring()">Reverse</button>
+<p>The Reversed String Is:</p>
+<div id="outputstring"></div>
 </body>
 </html>

@@ -1,4 +1,9 @@
-// Function to reverse a string
-function reverseString(_) {
-  // Put your code here
+function reverseString(str) {
+  var array = [];
+  array = str.split('');
+  array = array.reverse();
+  str = array.join('');
+  return str;
 }
+
+reverseString("reversed");
