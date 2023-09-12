@@ -7,6 +7,19 @@
   <script src="solution.js" defer></script>
 </head>
 <body>
-  
+  <h1>Reverse String</h1>
+  <label for="inputString">Enter a string:</label>
+  <input type="text" id="inputString">
+  <button onclick="reverse()">Reverse</button>
+  <p id="output"></p>
+
+  <script src="s"></script>
+  <script>
+    function reverse() {
+      let inputString = document.getElementById("inputString").value;
+      let reversedString = reverseString(inputString);
+      document.getElementById("output").textContent = reversedString;
+    }
+  </script>
 </body>
 </html>
