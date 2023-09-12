@@ -1,8 +1,5 @@
-// Function to reverse a string
-function reverseString(_) {
-  // Put your code here
-  def
-}  
+function reverseString(inputString) {
+  
   const charArray = inputString.split('');
   const reversedArray = charArray.reverse();
   const reversedString = reversedArray.join('');
