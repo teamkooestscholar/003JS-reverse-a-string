@@ -1,77 +1,68 @@
-# EASY: 003 JS - Reverse A String
+# Find the Largest Element in a List
 
-## Description
+This Python program defines a function `find_maximum` that finds and returns the largest element in a list of integers. It also includes a function `find_maximum_from_user_input` that allows the user to input a list of integers and then finds and displays the largest element from that list.
 
-Write a JavaScript function that takes a string as an input and returns the reverse of that string.
+## Function for Finding the Maximum Element
 
+The `find_maximum` function is designed to find the largest element in a list of integers. It follows these steps:
 
-## Sample solution
+```python
+def find_maximum(numbers):
+    """
+    Find the largest element in a list of integers.
+    :param numbers: A list of integers.
+    :type numbers: list
+    :return: The largest element in the list.
+    :rtype: int or None if the list is empty.
+    """
+    if len(numbers) == 0:
+        return None
 
-```javascript
-# Reverse User Input
+    max_number = numbers[0]
+    for number in numbers:
+        if number > max_number:
+            max_number = number
 
-This JavaScript program continuously prompts the user for input, reverses the input string, and displays the reversed string using alerts. The program allows the user to exit by typing 'quit.'
-
-## Function for Reversing User Input
-
-The code defines a function `reverseUserInput()` to perform the input and reversal operations.
-
-```javascript
-function reverseUserInput() {
-  // The main function body is here
-}
+    return max_number
 ```
 
-## User Input
+- It checks if the input list `numbers` is empty, and if so, it returns `None` to indicate that there is no largest element.
+- It initializes `max_number` with the first element of the list.
+- It then iterates through the list, comparing each element to the current maximum value (`max_number`).
+- If a number in the list is greater than the current `max_number`, it updates `max_number` to that value.
+- Once all elements have been checked, the function returns the largest element found.
 
-Inside the `reverseUserInput()` function, the program prompts the user for input using the `prompt()` function and stores it in the `inputString` variable.
+## Function for User Input and Output
 
-```javascript
-// Prompt the user for input
-const inputString = prompt("Enter a string to reverse (type 'quit' to exit):");
+The `find_maximum_from_user_input` function allows the user to input a list of integers separated by spaces and then finds and displays the largest element from that list. It follows these steps:
+
+```python
+def find_maximum_from_user_input():
+    user_input = input("Enter a list of integers separated by spaces: ")
+    input_numbers = user_input.split()
+    numbers = []
+
+    for num in input_numbers:
+        try:
+            numbers.append(int(num))
+        except ValueError:
+            print("Invalid input! Please enter only integers separated by spaces.")
+            return None
+
+    maximum = find_maximum(numbers)
+
+    if maximum is not None:
+        print("The maximum number is:", maximum)
 ```
 
-## Input Validation and Looping
+- It prompts the user to enter a list of integers separated by spaces using `input()`.
+- It splits the user input into individual numbers and stores them in the `input_numbers` list.
+- It then attempts to convert each item in `input_numbers` into an integer and adds it to the `numbers` list. If the conversion fails (e.g., if the user enters non-integer values), it prints an error message and returns `None`.
+- After collecting valid integers in the `numbers` list, it calls the `find_maximum` function to find the largest element.
+- Finally, it prints the largest element if it exists.
 
-The program checks if the user clicked "Cancel" or entered an empty string. If so, it displays a corresponding alert message. If the user enters "quit" (case-insensitive), the program exits the loop. Otherwise, it reverses the input string and displays it using an alert.
+## Program Execution
 
-```javascript
-// Check if the user clicked "Cancel" or entered an empty string
-if (inputString === null || inputString === "") {
-  alert("No input provided or canceled.");
-} else if (inputString.toLowerCase() === "quit") {
-  // User wants to quit the loop
-  break;
-} else {
-  // Reverse the input string and display it using alert
-  const reversedString = inputString.split("").reverse().join("");
-  alert("Reversed string: " + reversedString);
-}
-```
+The program concludes by calling `find_maximum_from_user_input()` to allow the user to input a list of integers and find the largest element from that list.
 
-## Function Execution
-
-The `reverseUserInput()` function is called to initiate the input and reversal process.
-
-```javascript
-// Call the function to start the loop
-reverseUserInput();
-```
-
-This program provides a simple way for users to reverse input strings and exit the process when desired.
-}
-```
-
-## Bonus Challenges
-
-* Modify the function to handle special characters or whitespace gracefully. (Hint: You may need to look into regular expressions.) **[+5 extra credit points]**
-
-* Write a version of the function that doesn't use the split, reverse, or join methods. (Hint: You'll need to use a loop.) **[+5 extra credit points]**
-
-* Create a web page that allows users to input a string and see the reversed result interactively. (Hint: You'll need to use HTML and JavaScript.) **[+5 extra credit points]**
-
-## How to answer?
-
-* Kindly go to `src` directory and edit `solution.js` file.
-
-* Replace the `commented code` with your solution.
+You can run the program, enter a list of integers as prompted, and it will display the largest element from your input.
