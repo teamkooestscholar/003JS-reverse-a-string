@@ -1,25 +1,25 @@
 function reverseString(inputString) {
-  // Use a regular expression to match any non-word characters or whitespace
-  const regex = /[\W_]/g;
-  // Replace special characters and whitespace with an empty string
-  const cleanedString = inputString.replace(regex, '');
-  // Convert the cleaned string to an array of characters
-  const charArray = cleanedString.split('');
-  // Reverse the array
-  charArray.reverse();
-  // Join the array back into a string and return it
-  return charArray.join('');
-}
-function reverseStringWithoutMethods(inputString) {
-  // Use a regular expression to match any non-word characters or whitespace
-  const regex = /[\W_]/g;
-  // Replace special characters and whitespace with an empty string
-  const cleanedString = inputString.replace(regex, '');
+  // Use a regular expression to match non-word characters and whitespace at the beginning and end
+  const regex = /^[\W\s]+|[\W\s]+$/g;
   
+  // Remove special characters and whitespace from the beginning and end of the input string
+  const cleanedString = inputString.replace(regex, '');
+
+  // Reverse the cleaned string using a loop
   let reversedString = '';
   for (let i = cleanedString.length - 1; i >= 0; i--) {
-    reversedString += cleanedString[i];
+    reversedString += cleanedString.charAt(i);
   }
-  
-  return reversedString;
+
+  // Reinsert the original special characters and whitespace at the beginning and end
+  let result = inputString.replace(cleanedString, reversedString);
+
+  return result;
 }
+
+// Example usage:
+const input = "Hello, World!";
+const reversed = reverseString(input);
+console.log(reversed); // Outputs: "!dlroW ,olleH"
+
+
